@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>ChatApp</title>
-</head>
-<body>
-    <!-- <h1>BODY</h1> -->
+  </head>
 
+  <body>
+
+    <!-- THE CHAT SECTION OF WEBPAGE BEGINS HERE. -->
     <section class="chatsection">
-        <div class="brand">
-            <img height="40px" src="img.jpg" alt="">
-            <h1 class="brandtitle">MyChat</h1>
-        </div>
-        <div class="messagearea">
 
-            <div class="outgoing message">
-                <h4>You</h4>
-                <p>You Start here...<p>
-            </div> 
-            <div class="incoming message">
-                <h4>Client</h4>
-                <p>Client starts here...</p>
-            </div>
+        <!-- The first component displays the name and logo of the chatapp -->
+      <div class="brand">
+        <img height="40px" src="img.jpg" alt="" />
+        <h1 class="brandtitle">MyChat</h1>
+      </div>
+
+      <!-- Then follows the chat section below -->
+      <div class="messagearea">
+
+        <!-- The div containing outgoing message -->
+        <div class="outgoing message">
+          <h4>You</h4>
+          <p>You Start here...</p>
+          <p></p>
         </div>
 
-        <div class="textarea">
-            <textarea name="textarea" id="textarea" cols="30" rows="1" placeholder="Write a message"></textarea>
+        <!-- The div containing incoming message -->
+        <div class="incoming message">
+          <h4>Client</h4>
+          <p>Client starts here...</p>
         </div>
+      </div>
+
+      <!-- The div where user will write and send his/her message -->
+      <div class="textarea">
+        <textarea
+          name="textarea"
+          id="textarea"
+          cols="30"
+          rows="1"
+          placeholder="Write a message"
+        ></textarea>
+      </div>
 
     </section>
 
+    <!--  -->
     <script src="/socket.io/socket.io.js"></script>
+
+    <!-- This file contains javascript code that contains the logic for inputting and displaying the message -->
     <script src="/client.js"></script>
-</body>
+
+  </body>
+  
 </html>
